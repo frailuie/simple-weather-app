@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(385deg, rgb(247, 213, 173), rgb(235, 245, 168), rgb(204, 247, 230), rgb(235, 187, 237));
+}
+
+.container {
+    position: relative;
+    height: 100px;
+    width: 420px;
+    background-color: rgb(251, 247, 242);
+    padding: 25px 40px;
+    overflow: hidden;
+    transition: 0.45s ease-out;
+    border-radius: 18px;
+}
+
+.search-box {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search-box i {
+    font-size: 20px;
+}
+
+
+.search-box button {
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    border-style: none;
+    cursor: pointer;
+    background-color: #ddf6f3;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+.search-box button:hover {
+    color: white;
+    background-color: #2a2929;
+}
+
+
+.search-box input {
+    border-style: none;
+    font-family: 'Rethink Sans', sans-serif;
+    font-size: 18px;
+    color: #2a2929;
+    margin: 4px;
+    padding: 8px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.search-box input::placeholder {
+    font-size: 18px;
+    font-weight: 600;
+    color: #7c7c7c;
+}
+
+.not-found {
+    display: none;
+    width: 100%;
+    text-align: center;
+    scale: 0;
+    opacity: 0;
+}
+
+
+.not-found img {
+    height: 70%;
+    width: 70%;
+    margin-left: 40px;
+}
+
+.not-found p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    color:#2a2929;
+    margin-top: -20px;
+}
+
+.weather-box, .weatherDetails {
+    scale: 0;
+    opacity: 0; /* change to 0 */
+}
+
+.weather-box {
+    text-align: center;
+}
+
+.weather-box .toggle {
+    position: absolute;
+    display: inline-block;
+    height: 20px;
+    width: 45px;
+    align-items: flex-end;
+    justify-content: right;
+    margin-top: -310px;
+    margin-left: 110px;
+
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-on {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddf6f3;
+    color: black;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+
+.toggle-on:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 1.5px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-on {
+    background-color: rgb(226, 223, 223);
+    color: white;
+}
+
+
+input:focus+ .toggle-on {
+    box-shadow: 0 0 1px #eeebeb;
+
+}
+
+input:checked+ .toggle-on:before {
+    transform: translateX(23px);
+}
+
+
+.on {
+    display: none;
+    color: white;
+}
+
+.off {
+    color: #2a2929;
+}
+
+.on, .off {
+    position: absolute;
+    text-align: end;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 65%;
+    font-family: 'Dosis', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+input:checked+ .toggle-on .on {
+    display: block;
+}
+
+input:checked+ .toggle-on .off {
+    display: none;
+}
+
+.weather-box input {
+    background-color: black;
+    position: absolute;
+    align-items: flex-end;
+    justify-content: right;
+    margin-top: -300px;
+
+}
+
+.weather-box button {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: 'Rethink Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #ddf6f3;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.weather-box button:hover {
+    color: white;
+    background-color: #2a2929;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+
+.weather-box img {
+    width: 60%;
+    margin-top: 30px;
+}
+
+.weather-box .temperature {
+    position: relative;
+    margin-top: 30px;
+    margin-left: -16px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #2a2929;
+
+}
+
+.weather-box .temperature span {
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+.weather-box p {
+    font-family: 'Rethink Sans', sans-serif;
+}
+
+.weather-box .description {
+    color:#2a2929;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.weather-details p, .weather-details span {
+    font-family: 'Rethink Sans', sans-serif;
+    font-size: 13.8px;
+}
+
+.weather-details .humidity, .weather-details .wind, .weather-details .feels-like {
+    display: flex;
+    width: 50%;
+    height: 100px;
+}
+
+.weather-details .humidity {
+    padding-left: 10px;
+    
+}
+
+.weather-details .wind {
+    padding-left: 45px;
+    
+}
+
+.weather-details .feels-like {
+    padding-left: 45px;
+}
+
+.weather-details i {
+    padding: 4px;
+    margin-right: 2px;
+    font-size: 16px;
+    color:#2a2929;
+}
+
+.fadeIn {
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+

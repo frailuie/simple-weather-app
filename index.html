@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;500&family=Rethink+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>weather app | frailuie</title>
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" list="datalistOptions" placeholder="Type to search...">
+            <datalist id="datalistOptions">
+                <option value="San Juan, Puerto Rico">
+                <option value="Tampa, Florida">
+                <option value="New Orleans, Louisana">
+                <option value="New York City, New York">
+                <option value="Salt Lake City, Utah">
+                <option value="San Francisco, California">
+            </datalist>
+            <button class="fa-solid fa-magnifying-glass" alt="click button to search for weather"></button>
+        </div>
+
+        <div class="not-found">
+            <img src="errornobg.jpg">
+            <p>Error! Location not found! Did you misspell it...?</p>
+        </div>
+
+        <div class="weather-box">
+            <img src="">
+            <p class="temperature" id="temperatureText"><span></span></p> 
+    
+            <label class="toggle">
+                <input type="checkbox" id="toggleFtoC">
+                <span class="toggle-on"></span>
+                <div>
+                    <span class="on">°C</span>
+                    <span class="off">°C</span>
+                </div>
+            </label>
+            <p class="description"></p>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i> 
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
+             </div>
+
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i> 
+                <div class="text">
+                    <span></span>
+                    <p>Wind</p>
+             </div>
+
+             <div class="feels-like">
+                <i class="fa-solid fa-temperature-half"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Feels Like</p>
+                </div>
+             </div>
+        </div>
+     </div>
+</div>
+
+  
+            
+            
+<script src="weather.js"></script>
+</body>
+</html>
