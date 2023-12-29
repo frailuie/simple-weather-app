@@ -2,9 +2,9 @@
 very simple weather app using OpenWeather API with an added Fahrenheit to Celsius converter
 
 # screenshots:
-![the weather in Skopje](https://github.com/frailuie/simple-weather-app/assets/147780973/51fd178c-43d7-4027-8305-931f00e35958)
-![the weather in Skopje but in Celsius](https://github.com/frailuie/simple-weather-app/assets/147780973/ecdc0e11-d458-40a1-8d71-938735fde0c9)
-![datalist shown of various cities in the U.S.](https://github.com/frailuie/simple-weather-app/assets/147780973/04eec8eb-de48-4a94-b91a-841958bbf9ff)
+![the weather in San Juan](https://github.com/frailuie/simple-weather-app/assets/147780973/e7ac40d8-2da7-41e1-84b1-528f1fdccfad)
+![the weather in San Juan but in Celsius](https://github.com/frailuie/simple-weather-app/assets/147780973/b0b92cb9-1373-489e-adcf-29848479f56b)
+![the weather in Edinburgh, Scotland]((https://github.com/frailuie/simple-weather-app/assets/147780973/145b004e-4d5c-40da-a2f4-405bdaeaafeb))
 
 
 # wishlist for my next weather app project:
